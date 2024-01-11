@@ -55,7 +55,7 @@ rock.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
-    },4000)
+    },6500)
 })
 
 
@@ -94,7 +94,7 @@ paper.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
-    },4000)
+    },6500)
 })
 
 scissor.addEventListener("click",() => {
@@ -131,7 +131,7 @@ scissor.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
-    },4000)
+    },6500)
 })
 
 
