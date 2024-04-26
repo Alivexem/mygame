@@ -26,6 +26,9 @@ rock.addEventListener("click",() => {
     if(display.style.display == "block"){
         return
     }
+    rock.style.transform = "scale(1.2)"
+    paper.style.opacity = "0.5"
+    scissor.style.opacity = "0.5"
     let random = Math.floor(Math.random() * plays.length)
     let src = plays[random]
     comgame.setAttribute("src",src)
@@ -56,6 +59,9 @@ rock.addEventListener("click",() => {
     setTimeout(() => {
         display.style.display = "none"
         rock.style.border = "2px solid orange"
+        rock.style.transform = "scale(1)"
+        paper.style.opacity = "1"
+        scissor.style.opacity = "1"
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
@@ -67,6 +73,9 @@ paper.addEventListener("click",() => {
     if(display.style.display == "block"){
         return
     }
+    paper.style.transform = "scale(1.2)"
+    rock.style.opacity = "0.5"
+    scissor.style.opacity = "0.5"
     let random = Math.floor(Math.random() * plays.length)
     let src = plays[random]
     comgame.setAttribute("src",src)
@@ -97,6 +106,9 @@ paper.addEventListener("click",() => {
     setTimeout(() => {
         display.style.display = "none"
         paper.style.border = "2px solid orange"
+        paper.style.transform = "scale(1)"
+        rock.style.opacity = "1"
+        scissor.style.opacity = "1"
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
@@ -107,6 +119,9 @@ scissor.addEventListener("click",() => {
     if(display.style.display == "block"){
         return
     }
+    scissor.style.transform = "scale(1.2)"
+    rock.style.opacity = "0.5"
+    paper.style.opacity = "0.5"
     let random = Math.floor(Math.random() * plays.length)
     let src = plays[random]
     comgame.setAttribute("src",src)
@@ -136,6 +151,9 @@ scissor.addEventListener("click",() => {
     setTimeout(() => {
         display.style.display = "none"
         scissor.style.border = "2px solid orange"
+        scissor.style.transform = "scale(1)"
+        rock.style.opacity = "1"
+        paper.style.opacity = "1"
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
