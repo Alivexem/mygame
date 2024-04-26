@@ -18,7 +18,9 @@ let announce = document.getElementById("announce")
 let player = document.getElementById("player")
 let computer = document.getElementById("computer")
 let btn = document.getElementById("btn")
-let audio = new Audio("effect.mp3")
+let audio1 = new Audio("win.wav")
+let audio2 = new Audio("loose.wav")
+let audio3 = new Audio("click.wav")
 
 rock.addEventListener("click",() => {
     if(display.style.display == "block"){
@@ -35,6 +37,7 @@ rock.addEventListener("click",() => {
         announce.innerText = "YOU LOSE! paper wrapped rock"
         announce.style.color = "red"
         computer.innerText++
+        audio2.play()
     }
     if(src == "scissor.png"){
         announce.innerText = "YOU WIN! rock smashed scissors"
@@ -44,7 +47,7 @@ rock.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.add("firework")
         })
-        audio.play()
+        audio1.play()
     }
     rock.style.border = "4px solid violet"
     display.style.display = "block"
@@ -69,11 +72,13 @@ paper.addEventListener("click",() => {
     if(src == "paper.png"){
         announce.innerText = "IT'S A TIE! you both played paper"
         announce.style.color = "orange"
+        audio3.play()
     }
     if(src == "scissor.png"){
         announce.innerText = "YOU LOSE! scissors cut paper"
         announce.style.color = "red"
         computer.innerText++
+        audio2.play()
     }
     if(src == "rock.png"){
         announce.innerText = "YOU WIN! paper wrapped rock"
@@ -83,7 +88,7 @@ paper.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.add("firework")
         })
-        audio.play()
+        audio1.play()
     }
     paper.style.border = "4px solid violet"
     display.style.display = "block"
@@ -107,11 +112,13 @@ scissor.addEventListener("click",() => {
     if(src == "scissor.png"){
         announce.innerText = "IT'S A TIE! you both played scissors"
         announce.style.color = "orange"
+        audio3.play()
     }
     if(src == "rock.png"){
         announce.innerText = "YOU LOSE! rock smashed scissors"
         announce.style.color = "red"
         computer.innerText++
+        audio2.play()
     }
     if(src == "paper.png"){
         announce.innerText = "YOU WIN! scissors cut paper"
@@ -120,7 +127,7 @@ scissor.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.add("firework")
         })
-        audio.play()
+        audio1.play()
     }
     scissor.style.border = "4px solid violet"
     display.style.display = "block"
