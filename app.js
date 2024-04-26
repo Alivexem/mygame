@@ -32,6 +32,7 @@ rock.addEventListener("click",() => {
     if(src == "rock.png"){
         announce.innerText = "IT'S A TIE! you both played rock"
         announce.style.color = "orange"
+        audio3.play()
     }
     if(src == "paper.png"){
         announce.innerText = "YOU LOSE! paper wrapped rock"
@@ -58,7 +59,7 @@ rock.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
-    },6500)
+    },5500)
 })
 
 
@@ -99,7 +100,7 @@ paper.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
-    },6500)
+    },5500)
 })
 
 scissor.addEventListener("click",() => {
@@ -138,7 +139,7 @@ scissor.addEventListener("click",() => {
         fireworks.forEach((item) => {
             item.classList.remove("firework")
         })
-    },6500)
+    },5500)
 })
 
 
